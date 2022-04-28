@@ -5,7 +5,7 @@ import SLIDES from './../SlideData';
 
 const Slider = () => {
   // 이미지 갯수 (실제 데이터에 존재하는 개수보다 1 적게 (index는 0부터 시작))
-  const TOTAL_SLIDES = 3;
+  const TOTAL_SLIDES = 2;
   const delay = 3000;
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef();
@@ -58,7 +58,7 @@ const Slider = () => {
     <SlideWrapper>
       <SlideContainer ref={slideRef}>
         {SLIDES.map((slide) => (
-          <img key={slide.id} src={slide.url} alt="" />
+          <img key={slide.id} src={slide.url} alt="slider" />
         ))}
       </SlideContainer>
       <ButtonWrapper>
@@ -108,7 +108,7 @@ const ButtonWrapper = styled.div`
 
 const Button = styled.button`
   all: unset;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
